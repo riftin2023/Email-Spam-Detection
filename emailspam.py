@@ -148,3 +148,12 @@ history = model.fit(
 test_loss, test_accuracy = model.evaluate(test_sequences, test_Y)
 print('Test Loss :',test_loss)
 print('Test Accuracy :',test_accuracy)
+
+#depicting a graph of the training and validation accuracy
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title('Model Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend()
+plt.show()
